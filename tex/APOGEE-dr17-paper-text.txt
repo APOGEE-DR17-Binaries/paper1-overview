@@ -1,0 +1,81 @@
+The APOGEE-Joker VAC contains posterior samples for binary-star orbital parameters (Keplerian orbital elements) for 358,350 sources with three or more APOGEE visit spectra that pass a set of quality cuts as described in \citet{Price-Whelan:2021}. The posterior samples are generated using \textit{The Joker}, a custom Monte Carlo sampler designed to handle the multi-modal likelihood functions that arise when inferring orbital parameters with sparsely-sampled or noisy radial velocity time data \citep{Price-Whelan:2017}. This VAC deprecates the previous iterations of the catalog \citep{Price-Whelan:2018, Price-Whelan:2020}.
+
+For 2,819 stars, the orbital parameters are well constrained, and the returned samples are effectively unimodal in period. For these cases, we use the sample(s) returned from \textit{The Joker} to initialize standard Markov Chain Monte Carlo (MCMC) sampling of the Keplerian parameters using the \textit{exoplanet} \citep{exoplanet} and provide these MCMC samples. For all stars, we provide a catalog containing metadata about the samplings, such as the maximum \textit{a posteriori} (MAP) parameter values and sample statistics for the MAP sample.
+
+\citet{Price-Whelan:2021} describes the data analysis procedure in more detail, and defines and analyzes a catalog of $\gtrsim$40,000 binary star systems selected using the raw orbital parameter samples released in this VAC.
+
+
+
+@misc{exoplanet,
+  author = {Daniel Foreman-Mackey and Arjun Savel and Rodrigo Luger  and
+            Eric Agol and Ian Czekala and Adrian Price-Whelan and
+            Christina Hedges and Emily Gilbert and Luke Bouma and Tom Barclay
+            and Timothy D. Brandt},
+   title = {exoplanet-dev/exoplanet v0.5.0},
+   month = may,
+    year = 2021,
+     doi = {10.5281/zenodo.1998447},
+     url = {https://doi.org/10.5281/zenodo.1998447}
+}
+
+@ARTICLE{Price-Whelan:2017,
+       author = {{Price-Whelan}, Adrian M. and {Hogg}, David W. and {Foreman-Mackey}, Daniel and {Rix}, Hans-Walter},
+        title = "{The Joker: A Custom Monte Carlo Sampler for Binary-star and Exoplanet Radial Velocity Data}",
+      journal = {\apj},
+     keywords = {binaries: spectroscopic, methods: data analysis, methods: statistical, planets and satellites: fundamental parameters, surveys, techniques: radial velocities, Astrophysics - Solar and Stellar Astrophysics, Astrophysics - Earth and Planetary Astrophysics},
+         year = 2017,
+        month = mar,
+       volume = {837},
+       number = {1},
+          eid = {20},
+        pages = {20},
+          doi = {10.3847/1538-4357/aa5e50},
+archivePrefix = {arXiv},
+       eprint = {1610.07602},
+ primaryClass = {astro-ph.SR},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017ApJ...837...20P},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{Price-Whelan:2018,
+       author = {{Price-Whelan}, Adrian M. and {Hogg}, David W. and {Rix}, Hans-Walter and {De Lee}, Nathan and {Majewski}, Steven R. and {Nidever}, David L. and {Troup}, Nicholas and {Fern{\'a}ndez-Trincado}, Jos{\'e} G. and {Garc{\'\i}a-Hern{\'a}ndez}, Domingo A. and {Longa-Pe{\~n}a}, Pen{\'e}lope and {Nitschelm}, Christian and {Sobeck}, Jennifer and {Zamora}, Olga},
+        title = "{Binary Companions of Evolved Stars in APOGEE DR14: Search Method and Catalog of {\ensuremath{\sim}}5000 Companions}",
+      journal = {\aj},
+     keywords = {binaries: spectroscopic, methods: data analysis, methods: statistical, planets and satellites: fundamental parameters, surveys, techniques: radial velocities, Astrophysics - Solar and Stellar Astrophysics},
+         year = 2018,
+        month = jul,
+       volume = {156},
+       number = {1},
+          eid = {18},
+        pages = {18},
+          doi = {10.3847/1538-3881/aac387},
+archivePrefix = {arXiv},
+       eprint = {1804.04662},
+ primaryClass = {astro-ph.SR},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018AJ....156...18P},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{Price-Whelan:2020,
+       author = {{Price-Whelan}, Adrian M. and {Hogg}, David W. and {Rix}, Hans-Walter and {Beaton}, Rachael L. and {Lewis}, Hannah M. and {Nidever}, David L. and {Almeida}, Andr{\'e}s and {Badenes}, Carles and {Barba}, Rodolfo and {Beers}, Timothy C. and {Carlberg}, Joleen K. and {De Lee}, Nathan and {Fern{\'a}ndez-Trincado}, Jos{\'e} G. and {Frinchaboy}, Peter M. and {Garc{\'\i}a-Hern{\'a}ndez}, D.~A. and {Green}, Paul J. and {Hasselquist}, Sten and {Longa-Pe{\~n}a}, Pen{\'e}lope and {Majewski}, Steven R. and {Nitschelm}, Christian and {Sobeck}, Jennifer and {Stassun}, Keivan G. and {Stringfellow}, Guy S. and {Troup}, Nicholas W.},
+        title = "{Close Binary Companions to APOGEE DR16 Stars: 20,000 Binary-star Systems Across the Color-Magnitude Diagram}",
+      journal = {\apj},
+     keywords = {Binary stars, Close binary stars, Radial velocity, Spectroscopy, Astronomy data analysis, Bayesian statistics, Astrostatistics, Surveys, 154, 254, 1332, 1558, 1858, 1900, 1882, 1671, Astrophysics - Solar and Stellar Astrophysics, Astrophysics - Astrophysics of Galaxies},
+         year = 2020,
+        month = may,
+       volume = {895},
+       number = {1},
+          eid = {2},
+        pages = {2},
+          doi = {10.3847/1538-4357/ab8acc},
+archivePrefix = {arXiv},
+       eprint = {2002.00014},
+ primaryClass = {astro-ph.SR},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2020ApJ...895....2P},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{Price-Whelan:2021,
+    author = {{Price-Whelan}, Adrian M.},
+    year = in prep.,
+}
